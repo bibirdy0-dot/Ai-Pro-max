@@ -1,0 +1,543 @@
+[
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "developer": "OpenAI",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
+    "badge": "Popular",
+    "tagline": "AI สารพัดประโยชน์ที่เก่งรอบด้าน อธิบายเข้าใจง่าย",
+    "description": "โมเดลปัญญาประดิษฐ์สนทนาอัจฉริยะจาก OpenAI เหมาะอย่างยิ่งสำหรับการถามตอบเนื้อหาบทเรียน ช่วยอธิบายคอนเซปต์ยากๆ ให้เข้าใจง่าย สรุปบทความ และช่วยร่างงานเขียนหรือโค้ดเบื้องต้น",
+    "url": "https://chatgpt.com",
+    "pricing": "Freemium",
+    "pricingDetails": "ใช้งาน GPT-4o mini และ GPT-4o ฟรีแบบจำกัดจำนวน / Plus $20/เดือน",
+    "categories": ["Learning", "Writing", "Coding", "Productivity"],
+    "useCases": ["สรุปบทเรียน", "อธิบายเนื้อหา", "ช่วยคิดหัวข้อรายงาน", "เขียนโค้ดเริ่มต้น", "ฝึกภาษา"],
+    "subjects": ["ทั่วไป", "ชีววิทยา", "ประวัติศาสตร์", "ภาษาอังกฤษ", "คอมพิวเตอร์", "สังคมศึกษา"],
+    "educationLevel": ["มัธยมต้น", "มัธยมปลาย", "มหาวิทยาลัย", "บุคคลทั่วไป"],
+    "skills": {
+      "learning": 95,
+      "reasoning": 90,
+      "writing": 92,
+      "research": 85,
+      "coding": 90,
+      "mathScience": 86,
+      "creativeMedia": 82,
+      "productivity": 94
+    },
+    "pros": [
+      "อธิบายภาษาง่าย มีความเป็นธรรมชาติสูงมาก",
+      "มีแอปพลิเคชันมือถือทั้ง iOS/Android ใช้งานสะดวก",
+      "รองรับการอัปโหลดรูปภาพและไฟล์เพื่อวิเคราะห์ (ในโควตาฟรี)",
+      "มี Voice Mode คุยฝึกภาษาแบบโต้ตอบด้วยเสียงได้ยอดเยี่ยม"
+    ],
+    "cons": [
+      "บางครั้งอาจตอบข้อมูลคลาดเคลื่อน (Hallucination) โดยไม่ระบุแหล่งที่มา",
+      "การคำนวณคณิตศาสตร์ซับซ้อนบางข้อยังมีผิดพลาดถ้าไม่ใช้ Code Interpreter"
+    ],
+    "limitations": [
+      "โควตาการใช้งานโมเดลระดับสูง (GPT-4o) มีจำกัดสำหรับผู้ใช้ฟรีในแต่ละช่วงเวลา"
+    ],
+    "languages": ["ไทย", "อังกฤษ", "และกว่า 50+ ภาษา"],
+    "platforms": ["Web", "iOS", "Android", "macOS", "Windows"],
+    "verified": true,
+    "demoStats": {
+      "initialRating": 4.8,
+      "reviewCount": 142
+    }
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "developer": "Anthropic",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/7/78/Anthropic_logo.svg",
+    "badge": "Top Writing",
+    "tagline": "AI สังเคราะห์ข้อมูล เขียนบทความ และวิเคราะห์โค้ดระดับสูง",
+    "description": "AI จาก Anthropic ที่โดดเด่นเรื่องการประมวลผลข้อความขนาดยาว การเขียนภาษาที่สละสลวย เป็นธรรมชาติ และการคิดวิเคราะห์อย่างมีเหตุผล เหมาะสำหรับนักเรียนนักศึกษาที่ต้องอ่านเอกสารวิชาการยาวๆ",
+    "url": "https://claude.ai",
+    "pricing": "Freemium",
+    "pricingDetails": "ใช้งาน Claude 3.5 Sonnet ฟรีจำกัดข้อความต่อวัน / Pro $20/เดือน",
+    "categories": ["Writing", "Learning", "Coding", "Research"],
+    "useCases": ["สรุปเอกสาร PDF ยาวๆ", "เขียนรายงานเชิงวิชาการ", "วิเคราะห์และแก้บั๊กโค้ด", "ตรวจทานสำนวนภาษา"],
+    "subjects": ["ภาษาไทย", "ภาษาอังกฤษ", "วรรณกรรม", "วิทยาศาสตร์", "คอมพิวเตอร์", "ปรัชญา"],
+    "educationLevel": ["มัธยมปลาย", "มหาวิทยาลัย", "บุคคลทั่วไป"],
+    "skills": {
+      "learning": 92,
+      "reasoning": 96,
+      "writing": 98,
+      "research": 93,
+      "coding": 95,
+      "mathScience": 88,
+      "creativeMedia": 76,
+      "productivity": 91
+    },
+    "pros": [
+      "ทักษะการเขียนภาษาไทยและอังกฤษสละสลวย ละเอียดและเป็นธรรมชาติมากที่สุด",
+      "มีฟีเจอร์ Artifacts ช่วยแสดงผลเอกสาร เว็บไซต์ และโค้ดแบบ Interactive ได้ทันที",
+      "อ่านและสรุปไฟล์เอกสารขนาดใหญ่ (PDF, DOCX) ได้แม่นยำสูง"
+    ],
+    "cons": [
+      "โควตาข้อความฟรีจำกัดค่อนข้างเร็วในช่วงเวลาที่มีผู้ใช้งานหนาแน่น",
+      "ไม่สามารถค้นหาข้อมูลสดบนเว็บแบบเรียลไทม์ได้โดยตรงในเวอร์ชันฟรี"
+    ],
+    "limitations": [
+      "มีขีดจำกัดข้อความต่อช่วงเวลา 5 ชั่วโมงสำหรับผู้ใช้บัญชีฟรี"
+    ],
+    "languages": ["ไทย", "อังกฤษ", "และภาษาอื่นๆ ทั่วโลก"],
+    "platforms": ["Web", "iOS", "Android"],
+    "verified": true,
+    "demoStats": {
+      "initialRating": 4.9,
+      "reviewCount": 118
+    }
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity AI",
+    "developer": "Perplexity",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Perplexity_AI_logo.svg",
+    "badge": "Best Research",
+    "tagline": "AI ค้นคว้าข้อมูลพร้อมอ้างอิงแหล่งที่มา (Citations) ชัดเจน",
+    "description": "เครื่องมือค้นหาและสังเคราะห์ข้อมูลด้วย AI ที่ค้นหาข้อมูลล่าสุดจากอินเทอร์เน็ต พร้อมแนบลิงก์แหล่งอ้างอิงทุกประโยค เหมาะอย่างยิ่งสำหรับทำรายงาน งานวิจัย และค้นหาข้อมูลวิชาการที่ต้องการความถูกต้อง",
+    "url": "https://www.perplexity.ai",
+    "pricing": "Freemium",
+    "pricingDetails": "ค้นหาแบบ Quick Search ฟรีไม่จำกัด / Pro Search ฟรี 5 ครั้งต่อวัน / Pro $20/เดือน",
+    "categories": ["Research", "Learning", "Productivity"],
+    "useCases": ["ค้นคว้าทำรายงาน", "หาแหล่งอ้างอิง บรรณานุกรม", "ติดตามข่าวสารข้อมูลปัจจุบัน", "เปรียบเทียบข้อมูลทางวิชาการ"],
+    "subjects": ["วิทยาศาสตร์", "สังคมศาสตร์", "ประวัติศาสตร์", "การแพทย์", "ทั่วไป"],
+    "educationLevel": ["มัธยมต้น", "มัธยมปลาย", "มหาวิทยาลัย", "บุคคลทั่วไป"],
+    "skills": {
+      "learning": 90,
+      "reasoning": 88,
+      "writing": 84,
+      "research": 99,
+      "coding": 78,
+      "mathScience": 86,
+      "creativeMedia": 65,
+      "productivity": 95
+    },
+    "pros": [
+      "มีลิงก์อ้างอิงชัดเจนทุกจุด ตรวจสอบที่มาของข้อมูลได้ทันที",
+      "มีฟีเจอร์ Focus Search เจาะจงเฉพาะ Academic Papers, YouTube หรือ Reddit ได้",
+      "ข้อมูลอัปเดตแบบเรียลไทม์จากอินเทอร์เน็ต"
+    ],
+    "cons": [
+      "ทักษะการแต่งเนื้อหาสร้างสรรค์หรืองานเขียนเรียงความยังสู้ Claude ไม่ได้",
+      "Pro Search ที่ใช้วิเคราะห์ลึกจำกัดจำนวนครั้งในเวอร์ชันฟรี"
+    ],
+    "limitations": [
+      "จำกัด Pro Search 5 ครั้งต่อทุกๆ 4 ชั่วโมงสำหรับบัญชีฟรี"
+    ],
+    "languages": ["ไทย", "อังกฤษ", "และหลากหลายภาษา"],
+    "platforms": ["Web", "iOS", "Android", "Chrome Extension"],
+    "verified": true,
+    "demoStats": {
+      "initialRating": 4.85,
+      "reviewCount": 96
+    }
+  },
+  {
+    "id": "gemini",
+    "name": "Google Gemini",
+    "developer": "Google",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg",
+    "badge": "Multimodal",
+    "tagline": "AI สารพัดประโยชน์จาก Google เชื่อมต่อ YouTube และ Docs",
+    "description": "AI Multimodal จาก Google ที่สามารถวิเคราะห์ข้อความ ภาพ เสียง และวิดีโอ เชื่อมต่อกับระบบนิเวศของ Google เช่น Google Docs, Drive และค้นหาข้อมูลจากวิดีโอบน YouTube ได้โดยตรง",
+    "url": "https://gemini.google.com",
+    "pricing": "Freemium",
+    "pricingDetails": "ใช้งาน Gemini 1.5 Flash ฟรีไม่จำกัด / Gemini Advanced (1.5 Pro) สมัครแพ็กเกจ Google One",
+    "categories": ["Learning", "Research", "Productivity", "Creative & Media"],
+    "useCases": ["สรุปคลิปวิดีโอ YouTube", "ช่วยทำสไลด์และเอกสาร", "ค้นหาข้อมูลเชื่อมกับ Google", "แปลภาษาและอธิบายภาพ"],
+    "subjects": ["วิทยาศาสตร์", "ภาษาต่างประเทศ", "คอมพิวเตอร์", "ภูมิศาสตร์", "ทั่วไป"],
+    "educationLevel": ["มัธยมต้น", "มัธยมปลาย", "มหาวิทยาลัย", "บุคคลทั่วไป"],
+    "skills": {
+      "learning": 92,
+      "reasoning": 89,
+      "writing": 88,
+      "research": 91,
+      "coding": 86,
+      "mathScience": 87,
+      "creativeMedia": 85,
+      "productivity": 93
+    },
+    "pros": [
+      "สรุปและจับประเด็นวิดีโอ YouTube ได้โดยไม่ต้องดูคลิปเต็ม",
+      "ส่งออกผลลัพธ์ไปยัง Google Docs และ Gmail ได้ในคลิกเดียว",
+      "รองรับ Context Window ขนาดยาวมาก วิเคราะห์ไฟล์ใหญ่ได้ดี"
+    ],
+    "cons": [
+      "บางครั้งตอบสั้นหรือสรุปแบบรวบรัดเกินไป",
+      "การเขียนโค้ดระดับสูงยังมีความแม่นยำเป็นรอง Claude 3.5"
+    ],
+    "limitations": [
+      "ฟีเจอร์ระดับสูงบางอย่างต้องใช้บัญชี Google ส่วนบุคคล (บางโรงเรียนอาจปิดกั้น)"
+    ],
+    "languages": ["ไทย", "อังกฤษ", "และกว่า 40+ ภาษา"],
+    "platforms": ["Web", "Android", "iOS (Google App)"],
+    "verified": true,
+    "demoStats": {
+      "initialRating": 4.7,
+      "reviewCount": 88
+    }
+  },
+  {
+    "id": "wolfram-alpha",
+    "name": "Wolfram Alpha",
+    "developer": "Wolfram Research",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Wolfram_Alpha_logo.svg",
+    "badge": "Math & Science",
+    "tagline": "เครื่องมือคำนวณและตอบปัญหาคณิตศาสตร์ วิทยาศาสตร์ แม่นยำ 100%",
+    "description": "Computational Knowledge Engine อันดับหนึ่งสำหรับการเรียนคณิตศาสตร์ แคลคูลัส ฟิสิกส์ และเคมี แก้สมการพร้อมแสดงวิธีทำทีละขั้นตอน (Step-by-step) ไม่มีปัญหาการตอบมั่วเหมือน AI ภาษาทั่วไป",
+    "url": "https://www.wolframalpha.com",
+    "pricing": "Freemium",
+    "pricingDetails": "คำนวณผลลัพธ์ฟรี / แสดง Step-by-step Solution และ Pro features เริ่มต้น $5/เดือนสำหรับนักเรียน",
+    "categories": ["Math & Science", "Learning"],
+    "useCases": ["แก้โจทย์แคลคูลัส", "วาดกราฟฟังก์ชัน 2D/3D", "ดุลสมการเคมี", "คำนวณฟิสิกส์และสถิติ"],
+    "subjects": ["คณิตศาสตร์", "แคลคูลัส", "พีชคณิต", "ฟิสิกส์", "เคมี", "สถิติ"],
+    "educationLevel": ["มัธยมปลาย", "มหาวิทยาลัย"],
+    "skills": {
+      "learning": 88,
+      "reasoning": 98,
+      "writing": 50,
+      "research": 85,
+      "coding": 82,
+      "mathScience": 100,
+      "creativeMedia": 40,
+      "productivity": 86
+    },
+    "pros": [
+      "ความแม่นยำด้านการคำนวณและสูตรคณิตศาสตร์ 100% เชื่อถือได้สูงสุด",
+      "พล็อตกราฟฟังก์ชันและแสดงคุณสมบัติทางคณิตศาสตร์ได้อย่างละเอียด",
+      "มีฐานข้อมูลค่าคงที่และตารางธาตุ/ข้อมูลวิทยาศาสตร์ที่สมบูรณ์"
+    ],
+    "cons": [
+      "การแสดงวิธีทำทีละขั้นตอน (Step-by-step) ละเอียดต้องสมัครสมาชิก Pro",
+      "ไม่เหมาะกับงานเขียนหรือการสรุปบทความภาษาทั่วไป"
+    ],
+    "limitations": [
+      "ต้องพิมพ์คำสั่งหรือสมการในรูปแบบที่ระบบเข้าใจได้ถูกต้อง"
+    ],
+    "languages": ["อังกฤษ (รับ Input สูตรคณิตศาสตร์สากล)"],
+    "platforms": ["Web", "iOS", "Android"],
+    "verified": true,
+    "demoStats": {
+      "initialRating": 4.8,
+      "reviewCount": 75
+    }
+  },
+  {
+    "id": "deepl",
+    "name": "DeepL Translate",
+    "developer": "DeepL",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/0/0f/DeepL_logo.svg",
+    "badge": "Best Translation",
+    "tagline": "เครื่องมือแปลภาษาด้วย AI ที่แม่นยำและเป็นธรรมชาติที่สุดในโลก",
+    "description": "สุดยอดระบบแปลภาษาด้วยโครงข่ายประสาทเทียม (Neural Network) แปลบทความวิชาการ เอกสาร PDF/Word ได้อย่างสละสลวยตามหลักไวยากรณ์และบริบท ไม่แข็งทื่อเหมือนเครื่องแปลภาษาทั่วไป",
+    "url": "https://www.deepl.com",
+    "pricing": "Freemium",
+    "pricingDetails": "แปลข้อความฟรีสูงสุด 1,500 ตัวอักษรต่อครั้ง และแปลเอกสารฟรี 3 ไฟล์ต่อเดือน",
+    "categories": ["Writing", "Learning", "Productivity"],
+    "useCases": ["แปลบทความวิชาการภาษาอังกฤษเป็นไทย", "แปลศัพท์และสำนวนเฉพาะทาง", "ตรวจทานความถูกต้องของการแปล", "แปลไฟล์สไลด์และเอกสาร"],
+    "subjects": ["ภาษาอังกฤษ", "ภาษาต่างประเทศ", "การแปล", "ภาษาศาสตร์"],
+    "educationLevel": ["มัธยมต้น", "มัธยมปลาย", "มหาวิทยาลัย", "บุคคลทั่วไป"],
+    "skills": {
+      "learning": 86,
+      "reasoning": 75,
+      "writing": 95,
+      "research": 80,
+      "coding": 40,
+      "mathScience": 60,
+      "creativeMedia": 60,
+      "productivity": 96
+    },
+    "pros": [
+      "แปลภาษาได้สละสลวย เป็นธรรมชาติ และรักษาบริบทเดิมได้ดีที่สุด",
+      "สามารถเลือกคำศัพท์ทางเลือก (Alternatives) ปรับโทนของประโยคได้",
+      "มีฟีเจอร์ DeepL Write ช่วยเกลาไวยากรณ์ภาษาอังกฤษ"
+    ],
+    "cons": [
+      "จำกัดจำนวนตัวอักษรและจำนวนไฟล์เอกสารในเวอร์ชันฟรี",
+      "ไม่สามารถถามตอบหรือสร้างเนื้อหาใหม่ได้ (เป็นเครื่องมือแปลเฉพาะทาง)"
+    ],
+    "limitations": [
+      "ฟรีสูงสุด 1,500 ตัวอักษรต่อการแปล 1 ครั้ง"
+    ],
+    "languages": ["ไทย", "อังกฤษ", "ญี่ปุ่น", "จีน", "เยอรมัน", "และกว่า 30+ ภาษา"],
+    "platforms": ["Web", "Windows", "macOS", "iOS", "Android", "Browser Extension"],
+    "verified": true,
+    "demoStats": {
+      "initialRating": 4.9,
+      "reviewCount": 105
+    }
+  },
+  {
+    "id": "canva-magic",
+    "name": "Canva Magic Studio",
+    "developer": "Canva",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg",
+    "badge": "Creative & Slides",
+    "tagline": "AI ช่วยสร้างสไลด์ พรีเซนเทชัน โปสเตอร์ และสื่อการเรียนรู้อัตโนมัติ",
+    "description": "ชุดเครื่องมือ AI ใน Canva ที่ช่วยนักเรียนสร้างสไลด์นำเสนอ เพียงแค่พิมพ์หัวข้อที่ต้องการ AI จะช่วยร่างเนื้อหา ออกแบบ Layout และสร้างภาพประกอบให้เสร็จสรรพ พร้อมปรับแต่งได้ตามใจชอบ",
+    "url": "https://www.canva.com",
+    "pricing": "Freemium",
+    "pricingDetails": "ใช้งานฟังก์ชันพื้นฐานและเครื่องมือ AI เริ่มต้นฟรี / Canva for Education ฟรีสำหรับครูและนักเรียนที่มีอีเมลสถานศึกษา",
+    "categories": ["Creative & Media", "Productivity"],
+    "useCases": ["สร้างสไลด์ Presentation หน้าห้อง", "ทำอินโฟกราฟิกสรุปบทเรียน", "ออกแบบโปสเตอร์รายงาน", "สร้างรูปภาพประกอบเนื้อหา"],
+    "subjects": ["ศิลปะ", "การนำเสนอ", "การออกแบบ", "สื่อสารมวลชน", "ทุกวิชา"],
+    "educationLevel": ["มัธยมต้น", "มัธยมปลาย", "มหาวิทยาลัย"],
+    "skills": {
+      "learning": 78,
+      "reasoning": 72,
+      "writing": 80,
+      "research": 70,
+      "coding": 45,
+      "mathScience": 55,
+      "creativeMedia": 99,
+      "productivity": 94
+    },
+    "pros": [
+      "สร้างสไลด์ Presentation ครบชุดในเวลาไม่กี่วินาที",
+      "มี Template สวยงามสำหรับนักเรียนนับแสนแบบ",
+      "Canva for Education แจก Pro ฟรีสำหรับโรงเรียนและสถานศึกษาที่เข้าร่วม"
+    ],
+    "cons": [
+      "เนื้อหาข้อความที่ AI ร่างให้อาจต้องนำมาปรับแต่งเพิ่มเติมเพื่อความลึกซึ้ง",
+      "เครื่องมือ AI เจนภาพระดับสูงบางอย่างจำกัดโควตาเครดิตต่อเดือน"
+    ],
+    "limitations": [
+      "เครดิต Magic Studio มีจำกัดในบัญชีฟรีทั่วไป"
+    ],
+    "languages": ["ไทย", "อังกฤษ", "และเกือบทุกภาษา"],
+    "platforms": ["Web", "iOS", "Android", "Windows", "macOS"],
+    "verified": true,
+    "demoStats": {
+      "initialRating": 4.82,
+      "reviewCount": 130
+    }
+  },
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "developer": "GitHub / Microsoft",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg",
+    "badge": "Coding Pro",
+    "tagline": "ผู้ช่วยเขียนโค้ดและตรวจแก้โปรแกรมใน VS Code ฟรีสำหรับนักเรียน",
+    "description": "AI คู่หูสำหรับนักเรียนสายโปรแกรมมิ่ง ทำงานในโปรแกรมเขียนโค้ด (VS Code) ช่วยเติมโค้ดอัตโนมัติ อธิบายการทำงานของฟังก์ชัน และแนะนำวิธีแก้ error นักเรียนสามารถขอใช้งานฟรีได้ผ่าน GitHub Student Developer Pack",
+    "url": "https://github.com/features/copilot",
+    "pricing": "Paid / Free for Students",
+    "pricingDetails": "ฟรี 100% สำหรับนักเรียนและนักศึกษาผ่าน GitHub Student Developer Pack / บุคคลทั่วไป $10/เดือน",
+    "categories": ["Coding", "Learning", "Productivity"],
+    "useCases": ["เขียนโค้ด Python, C++, Java, Web", "ช่วยอธิบายโค้ดที่อ่านไม่เข้าใจ", "หาบั๊กและแนะนำวิธีแก้ไข", "สร้าง Unit Test"],
+    "subjects": ["วิทยาการคำนวณ", "วิศวกรรมคอมพิวเตอร์", "เทคโนโลยีสารสนเทศ", "Coding"],
+    "educationLevel": ["มัธยมปลาย", "มหาวิทยาลัย"],
+    "skills": {
+      "learning": 88,
+      "reasoning": 92,
+      "writing": 70,
+      "research": 80,
+      "coding": 99,
+      "mathScience": 86,
+      "creativeMedia": 50,
+      "productivity": 97
+    },
+    "pros": [
+      "นักเรียนนักศึกษาขอสิทธิ์ใช้งานฟรีได้ตลอดระยะเวลาการศึกษา",
+      "ฝังตัวใน VS Code ทำงานลื่นไหล ไม่ต้องสลับหน้าต่างเบราว์เซอร์",
+      "เข้าใจ Context ของโปรเจกต์โค้ดทั้งหมดที่กำลังเปิดอยู่"
+    ],
+    "cons": [
+      "ต้องมีขั้นตอนการยืนยันสถานะนักเรียนด้วยอีเมลสถานศึกษาหรือบัตรนักเรียน",
+      "หากไม่มีสถานะนักเรียนจะมีค่าบริการรายเดือน"
+    ],
+    "limitations": [
+      "ต้องติดตั้ง Extension ใน VS Code หรือ IDE ที่รองรับ"
+    ],
+    "languages": ["ทุกภาษาโปรแกรมมิ่ง (Python, JS, C++, Java, etc.)"],
+    "platforms": ["VS Code", "JetBrains", "Neovim", "Visual Studio"],
+    "verified": true,
+    "demoStats": {
+      "initialRating": 4.92,
+      "reviewCount": 84
+    }
+  },
+  {
+    "id": "grammarly",
+    "name": "Grammarly",
+    "developer": "Grammarly",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/1/18/Grammarly_logo.svg",
+    "badge": "Grammar & Tone",
+    "tagline": "AI ตรวจไวยากรณ์ภาษาอังกฤษ เกลาสำนวน และเช็ค Plagiarism",
+    "description": "ผู้ช่วยตรวจทานงานเขียนภาษาอังกฤษระดับโลก ช่วยเช็คตัวสะกด แกรมม่า ปรับระดับความเป็นทางการ (Tone) และช่วยแนะนำการเลือกใช้คำศัพท์ที่เหมาะสมสำหรับการเขียน Essay และรายงาน",
+    "url": "https://www.grammarly.com",
+    "pricing": "Freemium",
+    "pricingDetails": "ตรวจไวยากรณ์และตัวสะกดพื้นฐานฟรี / Premium สำหรับการเกลาประโยคและเช็ค Plagiarism $12/เดือน",
+    "categories": ["Writing", "Learning", "Productivity"],
+    "useCases": ["ตรวจ Essay ภาษาอังกฤษ", "เกลาไวยากรณ์รายงาน", "ปรับระดับภาษาให้ดูเป็นมืออาชีพ", "ตรวจการคัดลอกผลงาน (Plagiarism)"],
+    "subjects": ["ภาษาอังกฤษ", "การเขียนเชิงวิชาการ", "การสื่อสารสากล"],
+    "educationLevel": ["มัธยมต้น", "มัธยมปลาย", "มหาวิทยาลัย", "บุคคลทั่วไป"],
+    "skills": {
+      "learning": 84,
+      "reasoning": 78,
+      "writing": 97,
+      "research": 75,
+      "coding": 40,
+      "mathScience": 50,
+      "creativeMedia": 65,
+      "productivity": 93
+    },
+    "pros": [
+      "ตรวจจับข้อผิดพลาดไวยากรณ์ภาษาอังกฤษได้แม่นยำ พร้อมคำอธิบายเหตุผล",
+      "มี Extension ทำงานบน Google Docs, เว็บบอร์ด และอีเมลได้ทันที",
+      "ช่วยปรับระดับความสุภาพและโทนของงานเขียนได้ตามต้องการ"
+    ],
+    "cons": [
+      "รองรับเฉพาะภาษาอังกฤษเป็นหลัก ไม่รองรับภาษาไทย",
+      "ฟีเจอร์ตรวจเช็ค Plagiarism และการเรียบเรียงประโยคขั้นสูงอยู่ในแพ็กเกจเสียเงิน"
+    ],
+    "limitations": [
+      "เวอร์ชันฟรีเน้นตรวจคำผิดและไวยากรณ์พื้นฐาน"
+    ],
+    "languages": ["อังกฤษ (US, UK, CA, AU, IN)"],
+    "platforms": ["Web", "Windows", "macOS", "Chrome Extension", "iOS", "Android"],
+    "verified": true,
+    "demoStats": {
+      "initialRating": 4.75,
+      "reviewCount": 92
+    }
+  },
+  {
+    "id": "julius-ai",
+    "name": "Julius AI",
+    "developer": "Julius AI",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Math-icon.svg/512px-Math-icon.svg.png",
+    "badge": "Data & Graphs",
+    "tagline": "AI วิเคราะห์ข้อมูล ทำสถิติ และวาดกราฟจากไฟล์ Excel/CSV",
+    "description": "AI ด้านการวิเคราะห์ข้อมูลและวิทยาศาสตร์ เพียงแค่อัปโหลดไฟล์ Excel หรือ CSV แล้วพิมพ์สั่งเป็นภาษาคน ระบบจะช่วยคำนวณสถิติ สร้างกราฟวิเคราะห์ และหาความสัมพันธ์ของข้อมูลให้ทันที",
+    "url": "https://julius.ai",
+    "pricing": "Freemium",
+    "pricingDetails": "ส่งข้อความวิเคราะห์ฟรี 15 ข้อความต่อเดือน / สมาชิกแบบชำระเงินเริ่มต้น $20/เดือน",
+    "categories": ["Math & Science", "Research", "Productivity"],
+    "useCases": ["วิเคราะห์ข้อมูลโครงงานวิชาการ", "สร้างกราฟสถิติจาก Excel", "แก้โจทย์คณิตศาสตร์เชิงลึก", "สรุปข้อมูลตารางขนาดใหญ่"],
+    "subjects": ["สถิติ", "คณิตศาสตร์", "วิทยาศาสตร์", "เศรษฐศาสตร์", "งานวิจัย"],
+    "educationLevel": ["มัธยมปลาย", "มหาวิทยาลัย"],
+    "skills": {
+      "learning": 86,
+      "reasoning": 94,
+      "writing": 75,
+      "research": 91,
+      "coding": 92,
+      "mathScience": 96,
+      "creativeMedia": 70,
+      "productivity": 90
+    },
+    "pros": [
+      "สร้างแผนภูมิและกราฟสถิติสวยงามพร้อมดาวน์โหลดไปใส่ในเล่มรายงานได้ทันที",
+      "แสดงโค้ด Python ที่ใช้ในการคำนวณ ตรวจสอบสูตรได้โปร่งใส",
+      "เหมาะมากสำหรับการทำโครงงานวิทยาศาสตร์และวิจัยระดับโรงเรียนและมหาวิทยาลัย"
+    ],
+    "cons": [
+      "โควตาข้อความฟรี 15 ข้อความต่อเดือนค่อนข้างน้อยสำหรับการวิเคราะห์ต่อเนื่อง",
+      "ผู้ใช้ต้องมีไฟล์ข้อมูลดิบ (Excel/CSV) จึงจะดึงศักยภาพได้สูงสุด"
+    ],
+    "limitations": [
+      "จำกัด 15 ข้อความฟรีต่อเดือนในเวอร์ชันทดลอง"
+    ],
+    "languages": ["อังกฤษ", "ไทย (เข้าใจคำสั่งพื้นฐาน)"],
+    "platforms": ["Web", "iOS", "Android"],
+    "verified": true,
+    "demoStats": {
+      "initialRating": 4.68,
+      "reviewCount": 46
+    }
+  },
+  {
+    "id": "notion-ai",
+    "name": "Notion AI",
+    "developer": "Notion Labs",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg",
+    "badge": "Productivity",
+    "tagline": "AI จัดระเบียบโน้ต สรุปเลกเชอร์ และจัดการตารางอ่านหนังสือ",
+    "description": "ระบบ AI ที่ฝังตัวอยู่ในสมุดจดโน้ต Notion ช่วยสรุปเลกเชอร์ที่จดไว้ แปลงโน้ตยาวๆ เป็น Action Items หรือตารางอ่านหนังสือ และช่วยระดมความคิดในการทำงานกลุ่ม",
+    "url": "https://www.notion.so/product/ai",
+    "pricing": "Freemium / Add-on",
+    "pricingDetails": "Notion ปกติฟรีสำหรับนักศึกษา / Notion AI มีโควตาทดลองใช้ฟรี จากนั้น $8-10/เดือน",
+    "categories": ["Productivity", "Writing", "Learning"],
+    "useCases": ["สรุปเลกเชอร์จากห้องเรียน", "จัดตารางอ่านหนังสือก่อนสอบ", "ระดมความคิดทำงานกลุ่ม", "สร้างฐานความรู้ (Second Brain)"],
+    "subjects": ["การจัดระเบียบ", "ทุกวิชา", "การบริหารเวลา", "การทำงานร่วมกัน"],
+    "educationLevel": ["มัธยมต้น", "มัธยมปลาย", "มหาวิทยาลัย"],
+    "skills": {
+      "learning": 88,
+      "reasoning": 82,
+      "writing": 90,
+      "research": 84,
+      "coding": 70,
+      "mathScience": 65,
+      "creativeMedia": 78,
+      "productivity": 98
+    },
+    "pros": [
+      "ผสานรวมกับการจดโน้ตและการจัดการโปรเจกต์ได้อย่างไร้รอยต่อ",
+      "มีฟีเจอร์ Q&A ถามข้อมูลจากโน้ตเก่าๆ ที่เราเคยจดไว้ได้ทั้งหมด",
+      "นักเรียนนักศึกษาสมัคร Notion Plus ฟรีได้ด้วยอีเมลสถานศึกษา"
+    ],
+    "cons": [
+      "ฟีเจอร์ Notion AI ต้องชำระเงินเพิ่มหลังจากหมดโควตาทดลองใช้ฟรี",
+      "ต้องใช้เวลาเรียนรู้วิธีจัดระเบียบหน้ากระดาษ Notion ในช่วงแรก"
+    ],
+    "limitations": [
+      "โควตาทดลองใช้ AI มีจำกัดต่อ Workspace"
+    ],
+    "languages": ["ไทย", "อังกฤษ", "และกว่า 20+ ภาษา"],
+    "platforms": ["Web", "macOS", "Windows", "iOS", "Android"],
+    "verified": true,
+    "demoStats": {
+      "initialRating": 4.78,
+      "reviewCount": 89
+    }
+  },
+  {
+    "id": "copilot-ms",
+    "name": "Microsoft Copilot",
+    "developer": "Microsoft",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Microsoft_365_Copilot_Icon.svg",
+    "badge": "Free GPT-4",
+    "tagline": "AI สารพัดประโยชน์พร้อมค้นเว็บสดและวาดรูป DALL-E ฟรี",
+    "description": "AI ผู้ช่วยจาก Microsoft ที่ใช้โมเดล GPT-4 และ DALL-E 3 ฟรี ค้นหาข้อมูลล่าสุดจากเว็บบราวเซอร์ Edge ช่วยสร้างภาพประกอบการเรียน และสรุปหน้าเว็บหรือไฟล์ PDF ได้ฟรีทันที",
+    "url": "https://copilot.microsoft.com",
+    "pricing": "Free",
+    "pricingDetails": "ใช้งาน GPT-4 และ DALL-E 3 ฟรี 100% ผ่านบัญชี Microsoft ทั่วไป",
+    "categories": ["Learning", "Research", "Creative & Media", "Productivity"],
+    "useCases": ["ค้นหาข้อมูลบนเว็บพร้อมอ้างอิง", "สร้างภาพประกอบรายงานด้วย DALL-E", "สรุปหน้าเว็บและ PDF ในเบราว์เซอร์ Edge", "ช่วยตรวจทานการบ้าน"],
+    "subjects": ["ทั่วไป", "วิทยาศาสตร์", "สังคมศึกษา", "ศิลปะ", "ภาษาอังกฤษ"],
+    "educationLevel": ["มัธยมต้น", "มัธยมปลาย", "มหาวิทยาลัย", "บุคคลทั่วไป"],
+    "skills": {
+      "learning": 90,
+      "reasoning": 88,
+      "writing": 86,
+      "research": 92,
+      "coding": 84,
+      "mathScience": 85,
+      "creativeMedia": 92,
+      "productivity": 91
+    },
+    "pros": [
+      "เข้าถึงโมเดล GPT-4 และสร้างรูป DALL-E 3 ฟรีโดยไม่มีค่าใช้จ่าย",
+      "มี Sidebar สรุป PDF และวิดีโอในเบราว์เซอร์ Microsoft Edge ได้สะดวก",
+      "มีระบบเลือกรูปแบบการตอบ (Creative, Balanced, Precise)"
+    ],
+    "cons": [
+      "ความเร็วในการตอบสนองอาจช้ากว่า ChatGPT เล็กน้อยในบางช่วงเวลา",
+      "การสนทนายาวๆ มีการจำกัดจำนวนเทิร์นต่อหนึ่ง Session"
+    ],
+    "limitations": [
+      "จำกัด 30 ข้อความต่อหนึ่งหัวข้อสนทนา (เริ่มหัวข้อใหม่ได้ฟรีไม่จำกัด)"
+    ],
+    "languages": ["ไทย", "อังกฤษ", "และหลากหลายภาษา"],
+    "platforms": ["Web", "Windows (Built-in)", "iOS", "Android", "Edge Browser"],
+    "verified": true,
+    "demoStats": {
+      "initialRating": 4.72,
+      "reviewCount": 98
+    }
+  }
+]

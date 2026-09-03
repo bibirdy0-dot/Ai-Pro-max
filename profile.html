@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>โปรไฟล์และบัญชีผู้ใช้ — AI Learning Hub</title>
+  <meta name="description" content="จัดการข้อมูลผู้ใช้ เข้าสู่ระบบ สมัครสมาชิก เปลี่ยนรหัสผ่าน และประวัติการใช้งาน">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon-wrapper">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <span class="brand-text">AI Learning Hub</span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">🏠 หน้าแรก</a></li>
+        <li><a href="discover.html" class="nav-link">🔍 ค้นหา AI</a></li>
+        <li><a href="compare.html" class="nav-link">⚖️ เปรียบเทียบ</a></li>
+        <li><a href="quiz.html" class="nav-link">✨ AI แนะนำให้ฉัน</a></li>
+        <li><a href="community.html" class="nav-link">🌐 ชุมชน</a></li>
+        <li>
+          <a href="favorites.html" class="nav-link">
+            ❤️ รายการโปรด <span class="nav-badge" id="nav-fav-count" style="display: none;">0</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="เปิดเมนู" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content page-fade-in">
+    <div class="container">
+      
+      <!-- STATE 1: GUEST NOT LOGGED IN -->
+      <div id="profile-guest-view" style="display: none; background: var(--gradient-card); border: 1px solid var(--border-glow); border-radius: var(--radius-xl); padding: 3.5rem 2rem; text-align: center; margin-bottom: 2.5rem;">
+        <div style="width: 84px; height: 84px; border-radius: 50%; background: var(--gradient-purple); display: flex; align-items: center; justify-content: center; font-size: 2.75rem; margin: 0 auto 1.5rem; border: 2px solid var(--border-glow);">
+          🔐
+        </div>
+        <h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 0.75rem; background: var(--gradient-brand); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+          ยินดีต้อนรับสู่ AI Learning Hub
+        </h1>
+        <p style="color: var(--text-secondary); max-width: 540px; margin: 0 auto 2rem; font-size: 1.05rem; line-height: 1.6;">
+          เข้าสู่ระบบเพื่อบันทึกประวัติ AI รายการโปรด การตั้งค่าส่วนตัว และจัดการรหัสผ่านของคุณได้อย่างปลอดภัย
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <button type="button" class="btn btn-primary btn-lg" onclick="window.UI.showAuthModal('login')">
+            🔑 เข้าสู่ระบบทันที
+          </button>
+          <button type="button" class="btn btn-secondary btn-lg" onclick="window.UI.showAuthModal('register')">
+            ✨ สร้างบัญชีใหม่
+          </button>
+        </div>
+        
+        <div style="margin-top: 2rem; display: inline-block; background: rgba(34,211,238,0.06); border: 1px dashed rgba(34,211,238,0.3); border-radius: var(--radius-md); padding: 0.75rem 1.25rem; font-size: 0.85rem; color: var(--text-tertiary);">
+          💡 ทดสอบด่วน: <code style="color: var(--accent-cyan);">student</code> / <code style="color: var(--accent-cyan);">password123</code>
+        </div>
+      </div>
+
+      <!-- STATE 2: LOGGED IN USER VIEW -->
+      <div id="profile-user-view" style="display: none;">
+        
+        <!-- User Profile Header Card -->
+        <div style="background: var(--gradient-card); border: 1px solid var(--border-medium); border-radius: var(--radius-lg); padding: 2.25rem; margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;">
+          <div style="display: flex; align-items: center; gap: 1.25rem;">
+            <div style="width: 76px; height: 76px; border-radius: 50%; background: var(--gradient-purple); display: flex; align-items: center; justify-content: center; font-size: 2.4rem; border: 2px solid var(--border-glow); flex-shrink: 0;" id="prof-avatar-icon">
+              🎓
+            </div>
+            <div>
+              <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.25rem; flex-wrap: wrap;">
+                <h1 style="font-size: 1.75rem; font-weight: 800;" id="prof-display-name">ชื่อผู้ใช้</h1>
+                <span class="badge badge-demo" id="prof-username-badge">@username</span>
+              </div>
+              <p style="color: var(--text-secondary); font-size: 0.92rem;">
+                ระดับการศึกษา: <span id="prof-edu-level" style="color: var(--accent-cyan); font-weight: 600;">มัธยมศึกษาตอนปลาย</span> • บัญชีเข้าสู่ระบบแล้ว
+              </p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <button type="button" class="btn btn-outline btn-sm" onclick="window.UI.showAuthModal('register')">
+              ➕ สร้างบัญชีอื่น
+            </button>
+            <button type="button" class="btn btn-outline btn-sm" style="color: var(--accent-rose); border-color: rgba(244,63,94,0.3);" onclick="window.App.handleLogout()">
+              🚪 ออกจากระบบ
+            </button>
+          </div>
+        </div>
+
+        <!-- Stats Row -->
+        <div class="profile-stat-grid">
+          <div class="profile-stat-item">
+            <div class="profile-stat-num" id="prof-stat-favs">0</div>
+            <div class="profile-stat-label">❤️ รายการโปรดที่บันทึก</div>
+          </div>
+          <div class="profile-stat-item">
+            <div class="profile-stat-num" id="prof-stat-recent">0</div>
+            <div class="profile-stat-label">🕒 AI ที่เปิดดูล่าสุด</div>
+          </div>
+          <div class="profile-stat-item">
+            <div class="profile-stat-num" id="prof-stat-reviews">0</div>
+            <div class="profile-stat-label">💬 รีวิวที่คุณเขียน</div>
+          </div>
+        </div>
+
+        <!-- Main Profile Grid: Left Recently Viewed / Right Settings & Change Password -->
+        <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem; margin-bottom: 3rem;" class="detail-columns">
+          
+          <!-- Left: Recently Viewed -->
+          <div>
+            <h2 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 1rem;">🕒 ดูล่าสุด (Recently Viewed)</h2>
+            <div id="recent-grid" class="ai-grid" style="grid-template-columns: 1fr;"></div>
+            <div id="recent-empty" class="empty-state-box" style="display: none; padding: 2.5rem 1.5rem;">
+              <div class="empty-state-icon" style="font-size: 2rem;">🕒</div>
+              <h3 class="empty-state-title" style="font-size: 1.1rem;">ยังไม่มีประวัติการเปิดดู AI</h3>
+              <p class="empty-state-desc" style="font-size: 0.85rem;">เมื่อคุณคลิกดูรายละเอียดของ AI ข้อมูลจะปรากฏที่นี่</p>
+              <a href="discover.html" class="btn btn-outline btn-xs">สำรวจ AI ทั้งหมด</a>
+            </div>
+          </div>
+
+          <!-- Right: Profile Settings & Change Password Forms -->
+          <div>
+            
+            <!-- Box 1: Edit Profile Form -->
+            <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.75rem; margin-bottom: 1.5rem;">
+              <h2 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 1.15rem; display: flex; align-items: center; gap: 0.5rem;">
+                <span>⚙️</span> <span>แก้ไขข้อมูลโปรไฟล์</span>
+              </h2>
+              
+              <form id="profile-edit-form" onsubmit="event.preventDefault(); handleSaveProfile();">
+                <div style="margin-bottom: 1.15rem;">
+                  <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem; color: var(--text-secondary);">ชื่อที่ใช้แสดง (Display Name):</label>
+                  <input type="text" id="edit-displayname" class="auth-input" required>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1.15rem;">
+                  <div>
+                    <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem; color: var(--text-secondary);">รูปโปรไฟล์ (Emoji):</label>
+                    <select id="edit-avatar" class="select-control" style="width: 100%;">
+                      <option value="🎓">🎓 นักเรียน</option>
+                      <option value="🚀">🚀 นักค้นคว้า</option>
+                      <option value="💻">💻 สายเขียนโค้ด</option>
+                      <option value="🎨">🎨 สายสร้างสรรค์</option>
+                      <option value="⚡">⚡ ผู้ใฝ่รู้</option>
+                      <option value="👨‍🏫">👨‍🏫 คุณครู</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem; color: var(--text-secondary);">ระดับการศึกษา:</label>
+                    <select id="edit-level" class="select-control" style="width: 100%;">
+                      <option value="มัธยมศึกษาตอนต้น">มัธยมศึกษาตอนต้น</option>
+                      <option value="มัธยมศึกษาตอนปลาย">มัธยมศึกษาตอนปลาย</option>
+                      <option value="มหาวิทยาลัย">มหาวิทยาลัย</option>
+                      <option value="บุคคลทั่วไป">บุคคลทั่วไป</option>
+                    </select>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                  💾 บันทึกข้อมูลโปรไฟล์
+                </button>
+              </form>
+            </div>
+
+            <!-- Box 2: Change Password Form with Password Generator -->
+            <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.75rem; margin-bottom: 1.5rem;">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.15rem;">
+                <h2 style="font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0;">
+                  <span>🔒</span> <span>เปลี่ยนรหัสผ่าน</span>
+                </h2>
+                <button type="button" class="btn btn-outline btn-xs" onclick="handleGenerateNewProfilePassword()" style="font-size: 0.75rem; border-color: var(--accent-cyan); color: var(--accent-cyan);">
+                  🎲 สุ่มรหัสผ่าน
+                </button>
+              </div>
+
+              <form id="profile-password-form" onsubmit="event.preventDefault(); handleChangePassword();">
+                <div style="margin-bottom: 1rem;">
+                  <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem; color: var(--text-secondary);">รหัสผ่านเดิม (Current Password):</label>
+                  <div class="auth-input-wrapper">
+                    <input type="password" id="chg-old-password" class="auth-input has-icon-right" required placeholder="กรอกรหัสผ่านปัจจุบัน">
+                    <button type="button" class="auth-icon-btn" onclick="window.UI.togglePasswordVisibility('chg-old-password', this)">👁️</button>
+                  </div>
+                </div>
+
+                <div style="margin-bottom: 1rem;">
+                  <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem; color: var(--text-secondary);">รหัสผ่านใหม่ (New Password):</label>
+                  <div class="auth-input-wrapper">
+                    <input type="password" id="chg-new-password" class="auth-input has-icon-right" required minlength="6" placeholder="อย่างน้อย 6 ตัวอักษร" oninput="handleProfilePasswordInput(this.value)">
+                    <button type="button" class="auth-icon-btn" onclick="window.UI.togglePasswordVisibility('chg-new-password', this)">👁️</button>
+                  </div>
+                  
+                  <div class="password-strength-container" style="margin-top: 0.4rem;">
+                    <div class="strength-bar-track">
+                      <div class="strength-bar-progress" id="chg-strength-bar"></div>
+                    </div>
+                    <div class="strength-label-row">
+                      <span>ความปลอดภัย: <strong id="chg-strength-text" style="color: var(--text-tertiary);">ยังไม่ระบุ</strong></span>
+                    </div>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-secondary" style="width: 100%;">
+                  🔑 อัปเดตรหัสผ่านใหม่
+                </button>
+              </form>
+            </div>
+
+            <!-- Box 3: Technical info & Reset -->
+            <div style="background: rgba(14, 20, 36, 0.6); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.5rem;">
+              <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--accent-amber); margin-bottom: 0.4rem;">ℹ️ ข้อมูลความปลอดภัย</h3>
+              <p style="font-size: 0.82rem; color: var(--text-tertiary); line-height: 1.6; margin-bottom: 1rem;">
+                ข้อมูลบัญชีและรหัสผ่านถูกบันทึกในเครื่องของคุณอย่างปลอดภัย สามารถสร้างหลายบัญชีเพื่อทดสอบระบบได้
+              </p>
+              <div style="display: flex; gap: 0.5rem;">
+                <button type="button" class="btn btn-outline btn-xs" onclick="handleClearFavorites()">ล้างรายการโปรด</button>
+                <button type="button" class="btn btn-outline btn-xs" style="color: var(--accent-rose); border-color: rgba(244,63,94,0.3);" onclick="handleResetAll()">⚠️ รีเซ็ต Demo ทั้งหมด</button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <div>© 2025–2026 AI Learning Hub. Static Web App Ready for Go Live.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      loadProfileData();
+
+      // ฟัง Event เมื่อ Auth state เปลี่ยน
+      window.addEventListener('aihub:auth-state-changed', () => {
+        loadProfileData();
+      });
+    });
+
+    async function loadProfileData() {
+      const currentUser = window.Auth.getCurrentUser();
+      const guestView = document.getElementById('profile-guest-view');
+      const userView = document.getElementById('profile-user-view');
+
+      if (!currentUser) {
+        // แสดง Guest View
+        if (guestView) guestView.style.display = 'block';
+        if (userView) userView.style.display = 'none';
+        return;
+      }
+
+      // แสดง User View
+      if (guestView) guestView.style.display = 'none';
+      if (userView) userView.style.display = 'block';
+
+      // เติมข้อมูล Header Card
+      document.getElementById('prof-avatar-icon').textContent = currentUser.avatar || '🎓';
+      document.getElementById('prof-display-name').textContent = currentUser.displayName || currentUser.username;
+      document.getElementById('prof-username-badge').textContent = `@${currentUser.username}`;
+      document.getElementById('prof-edu-level').textContent = currentUser.educationLevel || 'มัธยมศึกษาตอนปลาย';
+
+      // เติมข้อมูล Form Edit
+      document.getElementById('edit-displayname').value = currentUser.displayName || currentUser.username;
+      document.getElementById('edit-avatar').value = currentUser.avatar || '🎓';
+      document.getElementById('edit-level').value = currentUser.educationLevel || 'มัธยมศึกษาตอนปลาย';
+
+      // Load Stats Counters
+      const favs = window.DataLayer.getFavorites();
+      const recentIds = window.DataLayer.getRecentlyViewed();
+      const allReviews = window.DataLayer.safeGetStorage(window.DataLayer.STORAGE_KEYS.REVIEWS, []);
+
+      document.getElementById('prof-stat-favs').textContent = favs.length;
+      document.getElementById('prof-stat-recent').textContent = recentIds.length;
+      document.getElementById('prof-stat-reviews').textContent = allReviews.length;
+
+      // Load Recently viewed
+      const recentGrid = document.getElementById('recent-grid');
+      const recentEmpty = document.getElementById('recent-empty');
+
+      if (recentIds.length === 0) {
+        recentEmpty.style.display = 'block';
+        recentGrid.innerHTML = '';
+      } else {
+        recentEmpty.style.display = 'none';
+        const allAI = await window.DataLayer.getAllAI();
+        const recentAIs = recentIds.map(id => allAI.find(a => a.id === id)).filter(Boolean);
+        recentGrid.innerHTML = recentAIs.map(ai => window.UI.renderAICard(ai)).join('');
+      }
+    }
+
+    function handleSaveProfile() {
+      const displayName = document.getElementById('edit-displayname').value;
+      const avatar = document.getElementById('edit-avatar').value;
+      const educationLevel = document.getElementById('edit-level').value;
+
+      const res = window.Auth.updateProfile({ displayName, avatar, educationLevel });
+      if (res.success) {
+        window.UI.showToast(res.message, 'success');
+        loadProfileData();
+      } else {
+        window.UI.showToast(res.message, 'error');
+      }
+    }
+
+    function handleChangePassword() {
+      const oldPwd = document.getElementById('chg-old-password').value;
+      const newPwd = document.getElementById('chg-new-password').value;
+
+      const res = window.Auth.changePassword(oldPwd, newPwd);
+      if (res.success) {
+        window.UI.showToast(res.message, 'success');
+        document.getElementById('chg-old-password').value = '';
+        document.getElementById('chg-new-password').value = '';
+        const bar = document.getElementById('chg-strength-bar');
+        const text = document.getElementById('chg-strength-text');
+        if (bar && text) {
+          bar.style.width = '0%';
+          text.textContent = 'ยังไม่ระบุ';
+        }
+      } else {
+        window.UI.showToast(res.message, 'error');
+      }
+    }
+
+    function handleGenerateNewProfilePassword() {
+      const generated = window.Auth.generateStrongPassword(12);
+      const input = document.getElementById('chg-new-password');
+      if (input) {
+        input.value = generated;
+        input.type = 'text';
+        handleProfilePasswordInput(generated);
+        navigator.clipboard.writeText(generated).then(() => {
+          window.UI.showToast(`🎲 สุ่มรหัสผ่านปลอดภัย (${generated}) และคัดลอกแล้ว!`, 'success');
+        }).catch(() => {
+          window.UI.showToast(`🎲 สุ่มรหัสผ่านปลอดภัย: ${generated}`, 'success');
+        });
+      }
+    }
+
+    function handleProfilePasswordInput(val) {
+      const strength = window.Auth.checkPasswordStrength(val);
+      const bar = document.getElementById('chg-strength-bar');
+      const text = document.getElementById('chg-strength-text');
+      if (bar && text) {
+        bar.style.width = `${strength.percent}%`;
+        bar.style.backgroundColor = strength.color;
+        text.textContent = strength.label;
+        text.style.color = strength.color;
+      }
+    }
+
+    function handleClearFavorites() {
+      if (confirm('คุณต้องการลบรายการ AI ที่บันทึกไว้ทั้งหมดหรือไม่?')) {
+        window.DataLayer.safeSetStorage(window.DataLayer.STORAGE_KEYS.FAVORITES, []);
+        window.UI.showToast('ล้างรายการโปรดเรียบร้อยแล้ว', 'info');
+        loadProfileData();
+      }
+    }
+
+    function handleResetAll() {
+      if (confirm('คำเตือน: คุณต้องการล้างข้อมูล Demo ทั้งหมดใน Browser (รวมรีวิว, รายการโปรด, ผล Quiz) หรือไม่?')) {
+        window.DataLayer.resetAllDemoData();
+        window.UI.showToast('รีเซ็ตข้อมูลทั้งหมดเรียบร้อยแล้ว', 'warning');
+        setTimeout(() => window.location.reload(), 600);
+      }
+    }
+
+    /* ── Header shadow on scroll ── */
+    window.addEventListener('scroll', () => {
+      document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+  </script>
+</body>
+</html>

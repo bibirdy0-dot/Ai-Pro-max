@@ -1,0 +1,30 @@
+# ไฟล์ระบบ / OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.suo
+*.user
+*.log
+
+# Node.js (ถ้ามีในอนาคต)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables (ห้าม commit ไฟล์นี้เด็ดขาด!)
+.env
+.env.local
+.env.production
+
+# Build output
+dist/
+build/
+
+# Scratch files (temporary)
+*.tmp
+*.bak
